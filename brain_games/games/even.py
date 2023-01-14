@@ -8,7 +8,7 @@ def engine():
     num = randint(1, 99)
     right_answer = is_even(num)
     question = f'{num}'
-    return question, right_answer 
+    return question, right_answer
 
 
 def is_even(num):

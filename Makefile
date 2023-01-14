@@ -10,6 +10,9 @@ build:
 publish:
 	poetry publish --dry-run
 
+package-reinstall:
+	python3 -m pip install --user dist/*.whl --force-reinstall
+
 package-install:
 	python3 -m pip install --user dist/*.whl
 
