@@ -19,11 +19,3 @@ def engine():
         right_answer = first_operand * second_operand
     question = f'{first_operand} {random_operator} {second_operand}'
     return question, right_answer
-
-
-def main():
-    engine()
-
-
-if __name__ == '__main__':
-    main()

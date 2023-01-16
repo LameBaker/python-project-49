@@ -16,11 +16,3 @@ def is_even(num):
         return 'yes'
     else:
         return 'no'
-
-
-def main():
-    engine()
-
-
-if __name__ == '__main__':
-    main()
