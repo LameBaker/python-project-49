@@ -13,6 +13,6 @@ def engine():
         progressions.append(progressions[-1] + step)
     secret_index = randint(0, length_progression - 1)
     right_answer = progressions[secret_index]
-    progressions[secret_index] = '..'
-    question = ' '.join([str(x) for x in progressions])
+    progressions_str = " ".join(map(str, progressions))
+    question = progressions_str.replace(str(right_answer), '..')
     return question, right_answer
