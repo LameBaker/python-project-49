@@ -5,7 +5,7 @@ GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def engine():
-    number = 25 # randint(0, 100)
+    number = randint(0, 100)
     right_answer = is_prime(number)
     question = number
     return question, right_answer
