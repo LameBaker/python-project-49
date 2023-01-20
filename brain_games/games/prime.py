@@ -14,8 +14,7 @@ def engine():
 def is_prime(number):
     if number < 2:
         return 'no'
-    else:
-        for i in range(2, number // 2):
-            if number % i == 0 or number < 2:
-                return 'no'
+    for i in range(2, int(number ** 0.5)):
+        if number % i == 0:
+            return 'no'
     return 'yes'
