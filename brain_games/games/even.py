@@ -5,9 +5,9 @@ GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def engine():
-    num = randint(1, 99)
-    right_answer = is_even(num)
-    question = num
+    number = randint(0, 100)
+    right_answer = is_even(number)
+    question = number
     return question, right_answer
 
 
