@@ -5,7 +5,7 @@ GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def engine():
-    number = randint(0, 100)
+    number = 25 # randint(0, 100)
     right_answer = is_prime(number)
     question = number
     return question, right_answer
@@ -14,7 +14,7 @@ def engine():
 def is_prime(number):
     if number < 2:
         return 'no'
-    for i in range(2, int(number ** 0.5)):
+    for i in range(2, int(number ** 0.5) + 1):
         if number % i == 0:
             return 'no'
     return 'yes'
