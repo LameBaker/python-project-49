@@ -5,12 +5,12 @@ description = "Five small console games"
 authors = ["Oleg Nikitin <twisty-03-cubic@icloud.com>"]
 readme = "README.md"
 repository = "https://github.com/LameBaker/python-project-49"
-classifier = [
+classifiers = [
 	"Programming Language :: Python :: 3.11",
 	"Operating System :: OS Independent",
 	"Intended Audience :: Gamers",
 	"Programming Language :: Python :: Implementation :: CPython",
-	"Programming Language :: Python :: Implementation :: PyPy"
+	"Programming Language :: Python :: Implementation :: PyPy",
 	"Development Status :: 5 - Production/Stable",
 	]
 packages = [ 
