@@ -1,18 +1,28 @@
 from random import randint
 
 
-GAME_RULES = 'What number is missing in the progression?'
+GAME_RULE = 'What number is missing in the progression?'
+MIN_NUMBER = 0
+MAX_NUMBER = 99
+MIN_STEP = 1
+MAX_STEP = 10
+MIN_LENGTH = 5
+MAX_LENGTH = 20
 
 
-def engine():
-    step = randint(1, 10)
-    length_progression = randint(5, 20)
-    first_number = randint(0, 100)
-    progressions = [first_number]
+def get_question_and_answer():
+    step = randint(MIN_STEP, MAX_STEP)
+    length_progression = randint(MIN_LENGTH, MAX_LENGTH)
+    first_number = randint(MIN_NUMBER, MAX_NUMBER)
+    numbers = [first_number]
     for i in range(1, length_progression):
-        progressions.append(progressions[-1] + step)
+        numbers.append(numbers[-1] + step)
     secret_index = randint(0, length_progression - 1)
-    right_answer = progressions[secret_index]
-    progressions_str = " ".join(map(str, progressions))
-    question = progressions_str.replace(str(right_answer), '..')
-    return question, right_answer
+    correct_answer = numbers[secret_index]
+    progression_str = " ".join(map(str, numbers))
+    question = progression_str.replace(str(correct_answer), '..')
+    return question, correct_answer
+
+
+def main():
+    get_question_and_answer()

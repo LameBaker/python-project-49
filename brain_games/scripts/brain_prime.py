@@ -2,11 +2,11 @@
 
 
 import brain_games.games.prime as prime
-import brain_games.general as general
+import brain_games.engine as engine
 
 
 def main():
-    general.start_game(prime)
+    engine.start_game(prime)
 
 
 if __name__ == '__main__':

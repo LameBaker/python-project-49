@@ -2,11 +2,11 @@
 
 
 import brain_games.games.progression as progression
-import brain_games.general as general
+import brain_games.engine as engine
 
 
 def main():
-    general.start_game(progression)
+    engine.start_game(progression)
 
 
 if __name__ == '__main__':

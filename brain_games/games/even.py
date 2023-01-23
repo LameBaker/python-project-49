@@ -1,14 +1,16 @@
 from random import randint
 
 
-GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
+MIN_NUMBER = 0
+MAX_NUMBER = 99
 
 
-def engine():
-    number = randint(0, 100)
-    right_answer = is_even(number)
+def get_question_and_answer():
+    number = randint(MIN_NUMBER, MAX_NUMBER)
+    correct_answer = is_even(number)
     question = number
-    return question, right_answer
+    return question, correct_answer
 
 
 def is_even(num):
@@ -16,3 +18,7 @@ def is_even(num):
         return 'yes'
     else:
         return 'no'
+
+
+def main():
+    get_question_and_answer()
