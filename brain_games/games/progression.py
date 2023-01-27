@@ -22,7 +22,3 @@ def get_question_and_answer():
     progression_str = " ".join(map(str, numbers))
     question = progression_str.replace(str(correct_answer), '..')
     return question, correct_answer
-
-
-def main():
-    get_question_and_answer()

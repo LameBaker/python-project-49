@@ -1,7 +1,7 @@
 import prompt
 
 
-COUNT_ROUND = 3
+ROUNDS_COUNT = 3
 
 
 def start_game(game):
@@ -10,7 +10,7 @@ def start_game(game):
     print(f'Hello, {user_name}!')
     print(game.GAME_RULE)
     i = 0
-    while i < COUNT_ROUND:
+    while i < ROUNDS_COUNT:
         question, correct_answer = game.get_question_and_answer()
         print(f'Question: {question}')
         user_answer = input('Your answer: ')
@@ -20,8 +20,8 @@ def start_game(game):
             continue
         else:
             print(
-                f"'{user_answer}' is wrong answer ;(. "
-                f"Correct answer was '{correct_answer}'.")
-            print(f"Let's try again, {user_name}!")
+                f'{user_answer} is wrong answer ;(. '
+                f'Correct answer was {correct_answer}.')
+            print(f'Let\'s try again, {user_name}!')
             return
     print(f'Congratulations, {user_name}!')
