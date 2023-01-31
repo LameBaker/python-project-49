@@ -14,11 +14,12 @@ def get_question_and_answer():
     step = randint(MIN_STEP, MAX_STEP)
     length_progression = randint(MIN_LENGTH, MAX_LENGTH)
     first_number = randint(MIN_NUMBER, MAX_NUMBER)
-    correct_answer, question = create_progression_and_secret_number(first_number, length_progression, step)
+    correct_answer, question = \
+        create_progression_and_secret(first_number, length_progression, step)
     return question, correct_answer
 
 
-def create_progression_and_secret_number(first_number, length_progression, step):
+def create_progression_and_secret(first_number, length_progression, step):
     numbers = [first_number]
     for i in range(1, length_progression):
         numbers.append(numbers[-1] + step)
