@@ -16,7 +16,7 @@ make package-install
 ```
 
 ## Run
-```bush
+```bash
 brain-even
 brain-calc
 brain-gcd

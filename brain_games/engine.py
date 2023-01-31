@@ -9,14 +9,12 @@ def start_game(game):
     user_name = prompt.string('May I have your name? ')
     print(f'Hello, {user_name}!')
     print(game.GAME_RULE)
-    i = 0
-    while i < ROUNDS_COUNT:
+    for i in range(0, ROUNDS_COUNT):
         question, correct_answer = game.get_question_and_answer()
         print(f'Question: {question}')
         user_answer = input('Your answer: ')
         if str(correct_answer) == user_answer:
             print('Correct!')
-            i += 1
             continue
         else:
             print(

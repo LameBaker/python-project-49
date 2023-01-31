@@ -8,14 +8,19 @@ OPERATORS = ('*', '-', '+')
 
 
 def get_question_and_answer():
-    random_operator = choice(OPERATORS)
+    operator = choice(OPERATORS)
     first_number = randint(MIN_NUMBER, MAX_NUMBER)
     second_number = randint(MIN_NUMBER, MAX_NUMBER)
-    if random_operator == '+':
-        correct_answer = first_number + second_number
-    elif random_operator == '-':
-        correct_answer = first_number - second_number
-    elif random_operator == '*':
-        correct_answer = first_number * second_number
-    question = f'{first_number} {random_operator} {second_number}'
+    correct_answer = calculate(first_number, second_number, operator)
+    question = f'{first_number} {operator} {second_number}'
     return question, correct_answer
+
+
+def calculate(first_number, second_number, operator):
+    if operator == '+':
+        result = first_number + second_number
+    elif operator == '-':
+        result = first_number - second_number
+    elif operator == '*':
+        result = first_number * second_number
+    return result
