@@ -20,9 +20,10 @@ def get_question_and_answer():
 
 
 def create_progression_and_secret(first_number, length_progression, step):
-    numbers = [first_number]
-    for i in range(1, length_progression):
-        numbers.append(numbers[-1] + step)
+    numbers = []
+    last_number = first_number + step * length_progression
+    for value in range(first_number, last_number, step):
+        numbers.append(value)
     secret_index = randint(0, length_progression - 1)
     secret_number = numbers[secret_index]
     progression_str = " ".join(map(str, numbers))
